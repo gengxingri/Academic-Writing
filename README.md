@@ -1,2 +1,3 @@
 # Mathematical-Writing-in-English
-Some reference books about mathematical writing in English
+
+This repo shows some reference books about mathematical writing in English.
