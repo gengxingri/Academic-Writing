@@ -1,0 +1,515 @@
+\documentclass[twoside,10pt]{article}
+
+%\usepackage{refcheck}
+
+\usepackage[pagewise]{lineno}%\linenumbers
+
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{colortbl,dcolumn}
+\usepackage{paralist}  % generate "compactenum"
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{cite}
+\usepackage{appendix}
+\usepackage{subcaption}
+\usepackage{tikz}
+
+     %\textheight=130truemm
+     \textheight=220truemm
+%
+     %\textwidth=158truemm
+     \textwidth=160truemm
+
+\hoffset=0truemm
+\voffset=0truemm
+
+\topmargin=0truemm
+% \topmargin=-25truemm
+%\topmargin=-10truemm
+     %\headheight=12pt
+     %\headsep=15pt
+     \oddsidemargin=0truemm
+     \evensidemargin=0truemm
+
+     %\theoremstyle{plain}
+     \newtheorem{lemma}{\bf Lemma}[section]
+     \newtheorem{theorem}{\bf Theorem}[section]
+     \newtheorem{proposition}{\bf Proposition}[section]
+     \newtheorem{corollary}{\bf Corollary}[section]
+     \newtheorem{definition}{\bf Definition}[section]
+     \newtheorem{remark}{\bf Remark}[section]
+     %\theoremstyle{remark}
+     \newtheorem{example}{\bf Example}
+     \numberwithin{equation}{section}
+     \newtheorem{claim}{\bf Claim}[section]
+
+
+
+
+%\newcommand{\R}{\mathbb{R}}
+%\newcommand{\om}{\Omega_1}
+%\newcommand{\on}{\Omega_2}
+%\newcommand{\de}{\delta}
+%\newcommand{\be}{\beta}
+%\newcommand{\ga}{\gamma/\alpha}
+%\newcommand{\sd}{\frac{\sigma}{\delta}}
+%\newcommand{\ssm}{\sqrt{\sigma\mu}}
+%\newcommand{\g}{\gamma}
+%\newcommand{\al}{\alpha}
+%\newcommand{\po}{\partial\Omega_1}
+%\newcommand{\n}{\mathbf{n}}
+%\newcommand{\s}{\mathbf{s}}
+%\newcommand{\tw}{\int_0^T\int_{\Omega_1}}
+%\newcommand{\tv}{\int_0^T\int_{\Omega_2}}
+%\newcommand{\la}{\lambda}
+%\newcommand{\kk}{{\color{blue}k}}
+
+
+\newcommand\eqnref[1]{(\ref{#1}}
+\newcommand{\thmref}[1]{Theorem~\ref{#1}}
+\newcommand{\secref}[1]{\S\ref{#1}}
+\newcommand{\lemref}[1]{Lemma~\ref{#1}}
+%\newcommand\bes{\begin{eqnarray}}
+%\newcommand\ees{\end{eqnarray}}
+%\newcommand\bess{\begin{eqnarray*}}
+%\newcommand\eess{\end{eqnarray*}}
+%\newcommand\cL{{\mathbf L}}
+\newcommand\ccL{{\mathcal L}}
+\newcommand{\bsu}{{\boldsymbol{u}}}
+\newcommand{\bsv}{\boldsymbol{v}}
+\newcommand{\bsw}{\boldsymbol{w}}
+\newcommand{\bsf}{\boldsymbol{f}}
+\newcommand{\bsm}{\boldsymbol{m}}
+\newcommand{\bsg}{\boldsymbol{g}}
+\newcommand{\bszero}{\boldsymbol{0}}
+\newcommand{\bsone}{\boldsymbol{1}}
+\newcommand{\bsvarphi}{\boldsymbol{\varphi}}
+\newcommand{\bspsi}{\boldsymbol{\psi}}
+\newcommand{\dx}{{\mathrm d}x}
+\newcommand{\ds}{{\mathrm d}s}
+
+\newcommand{\dt}{{\mathrm d}t}
+\newcommand{\bsc}{\boldsymbol{c}}
+%\newcommand{\lspace}{-6pt}
+
+\begin{document}
+\title{{\LARGE PAPER TITLE}
+ \footnotetext{
+ E-mail addresses: ...; ...\\ $^*$Corresponding author}}
+
+
+\author{{The first author $^{a,b}$ and the second author $^{b,*}$}\\[2mm]
+\small\it $^a$ Institution, City, Country \\
+\small\it $^b$ Institution, City, Country}
+
+
+\date{}
+
+
+\maketitle
+
+
+\begin{abstract}
+This is our abstract
+
+...
+
+...
+
+...
+\end{abstract}
+
+\noindent{\bf Keywords.} several keywords...\\
+
+\noindent{\bf AMS subject classifications.} ...
+
+%\tableofcontents
+
+\section{Introduction}
+This is our introduction part 
+
+...
+
+...
+
+...
+
+
+\begin{equation}\label{Intro:1}
+\left\{
+	\begin{array}{rcll}
+		\partial_{t} u_i-\Delta u_i &=& \lambda g_i(x)f(u_i),\;\; & (x,t)\in \Omega_i\times (0,\infty),\\
+		\nu\cdot \nabla u_i&=&\gamma (u_2-u_1),& (x,t)\in \Sigma\times (0,\infty),\\
+\nu \cdot \nabla u_2 &= &0,\;\; & (x,t)\in \Gamma\times (0,\infty),\\
+		u_i(x,0)&=&u_{i0}(x),& x\in \Omega_i.
+	\end{array}
+	\right.
+\end{equation}
+
+
+\begin{figure}[h]
+%\centerline{\scalebox{0.5}{\includegraphics{f1.png}}}
+\caption{Domains $\Omega_1$ and $\Omega_2$, interface $\Sigma$,  outer boundary $\Gamma$, and unit outer normal vector $\nu$.}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+This paper is organized as follows.
+
+...
+
+...
+
+...
+
+
+\section{Section two}
+
+This is our section two
+
+...
+
+...
+
+...
+
+
+
+\subsection{Subsection one}\label{subsec:} 
+
+
+
+
+\begin{definition}\label{def:1}
+We call $\bsu$  a weak solution of \eqref{Intro:1} if $\bsu\in W_{2}^{1,0}$ and
+	\begin{equation}
+		-\int _0^T (\bsu,\boldsymbol{\xi}_t)_{L^2}\; \dt  + \int_0^T B_\gamma (\bsu,\boldsymbol{\xi}) \; \dt - (\bsu_0,\boldsymbol{\xi}(\cdot,0))_{L^2}= \int _0 ^T (\bsf,\boldsymbol{\xi})_{L^2}\;\dt
+	\end{equation}
+	for every  $\boldsymbol{\xi}\in W_2^{1,1}$ satisfying $\boldsymbol{\xi}(\cdot,T)\equiv 0$ in $\Omega$.
+\end{definition}
+
+\begin{remark}{\rm According to \cite[Theorem\,2]{Chen2001},
+	our Definition\,\ref{def:1} is in accordance with the definitions of weak solutions in  \cite[Definition\,2.1 and (16)]{Chen2001}.}
+\end{remark}
+
+...
+
+...
+
+...
+
+\begin{theorem}\label{existence:1}
+	If $\bsc\in L^\infty$ and $\bsf\in L^2((0,T);L^2)$,
+	then \eqref{Intro:1} has a unique weak solution $\bsu$ for every $\bsu_0\in L^2$. Moreover,
+	 $\bsu\in V^{1,0}_2$ and $\bsu(\cdot,t)\to \bsu_0$ in $L^2$ as $t\to 0+$.
+\end{theorem}
+
+
+
+\begin{proof}
+	
+	\begin{eqnarray}
+		B_\gamma (\bsu,\bsv)&\le& C_1 ||\bsu||_{W_2^1}||\bsv||_{W_2^1}\;\;\forall\, \bsu,\bsv\in W_2^1,\label{1127}\\
+		B_\gamma(\bsu,\bsu)&\ge& C_2 ||\bsu||_{W_2^1}^2\;\;\forall\, \bsu\in W_2^1.\label{1128}
+	\end{eqnarray}
+
+...
+
+...
+
+...
+	
+	
+
+\end{proof}
+
+\begin{corollary}
+	Suppose $\bsc\in L^\infty$ and $\bsf\in L^2$. If $\bsu$ is a weak solution of \eqref{Intro:1}, then there exists a constant $C=C(\bsc)$ such that
+	\begin{equation}
+		||\bsu||_{W_2^1}\le C \left(||\bsf||_{L^2} + ||\bsu||_{L^2}\right).
+	\end{equation}
+\end{corollary}
+
+\subsection{Subsection two}\label{subsec:2}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{lemma}\label{lem:steklov}
+	If $\bsu\in V_{2,T}^{1,0}$, then $\bsu^h\in W^{1,1}_{2,T-\delta}$ for all $0<h\le \delta$ and
+	\begin{equation}
+		\bsu^h\to \bsu \;\;\; \mbox{in}\;\;\; V_{2,T-\delta}^{1,0}\;\;\mbox{as}\;\; h\to 0+.
+	\end{equation}
+\end{lemma}
+\begin{proof}
+This lemma follows from applying \cite[p.\,85, Lemma\,4.7]{LSU1968} to each $u_i$ for $i=1,2$.
+\end{proof}
+
+
+
+
+	
+	
+	
+
+
+
+
+
+\begin{theorem}\label{weaksol:1}
+	Suppose $\bsc\in C^{\alpha}$ for some $\alpha\in(0,1)$ and $\bsf\in L^\infty((0,T); L^\infty)$. The following conclusions hold for the unique weak solution of \eqref{Intro:1}.\\
+\noindent\emph{(i)} If $\bsu_0\in L^\infty$, then $\bsu\in L^\infty((0,T);L^\infty)$ and
+\begin{equation}\label{eq:bound}
+			||\bsu||_{L^\infty((0,T);L^\infty)}\le C \left( ||\bsu_0||_{L^\infty} + ||\bsf||_{L^\infty((0,T);L^\infty)}\right).
+		\end{equation}
+\noindent\emph{(ii)} If $\bsu_0\in L^\infty$, then
+	   \begin{equation}\label{eq:holder}
+	   	u_i\in C^{\alpha,\frac{\alpha}{2}}(\bar{\Omega}_i\times [\epsilon,T])\;\;\mbox{for all} \; \; \epsilon\in (0,T), \;i=1,2.
+	   \end{equation}
+\noindent\emph{(iii)} If $\bsu_0\in C^0$, then $\bsu\in C^0([0,T];C^0)$ and
+	   \begin{equation}
+	   	\bsu(\cdot,t)\to \bsu_0\;\;\mbox{in}\;\; C^0\;\;\mbox{as}\;\; t\to 0+.
+	   \end{equation}
+\end{theorem}
+
+...
+
+...
+
+...
+
+
+
+\subsection{Subsection three}\label{subsec:3}
+
+
+
+...
+
+...
+
+...
+
+
+\section{Section three}
+
+The first eigenvalue problem reads
+\begin{equation}\label{EV:1}
+	\left\{
+	\begin{array}{rcll}
+		-\Delta \psi_i + c_i(x)\psi_i &=& \mu \psi_i, \;\;& x\in\Omega_i,\\
+		\nu\cdot\nabla\psi_i &=&\gamma (\psi_2-\psi_1),&x\in\Sigma,\\
+		\nu\cdot \nabla \psi_2 &=&0,\;\; &x\in \Gamma,
+	\end{array}
+	\right.
+\end{equation}
+
+
+\begin{figure}
+%\centerline{\scalebox{0.5}{\includegraphics{test.jpg}}}
+\caption{The construction of $\tilde\bsvarphi$ from $\bsvarphi_{b}$, where the dropped height $h=\bsvarphi_{b}'(b)/\gamma$.}
+\end{figure}
+
+...
+
+...
+
+...
+
+
+
+\section{Discussion}
+
+
+...
+
+...
+
+...
+
+
+\bigskip
+\section{ Acknowledgment*} ...
+\newpage
+
+%-------------Appendix--------------%
+\appendix
+\begin{center}
+	\bfseries Appendix
+\end{center}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+\renewcommand{\thetheorem}{A\arabic{theorem}}
+\renewcommand{\theequation}{A.\arabic{equation}}
+
+
+\begin{equation}\label{Apx:1}
+	\left\{
+	\begin{array}{rcll}
+		\partial_t w-\Delta w + c(x,t)w&=& f(x,t),\;\; &(x,t)\in D_T, \\
+		\nu\cdot \nabla w &=&\psi(x,t), &(x,t)\in (\partial D)_T,\\
+w(x,0)&=&w_0(x),&x\in D.
+	\end{array}
+	\right.
+\end{equation}
+
+\begin{theorem}\emph{(\cite[Theorem\,17]{Sol64})} \label{thm:apx1}
+	Suppose that $c\in C^{\alpha,\frac{\alpha}{2}}(\overline{D_T})$ and that $f\in L^p(D_T)$, $w_0\in W_p^{2-\frac{2}{p}}(D)$, and $\psi \in W_p^{1-\frac{1}{p},\frac{1}{2}-\frac{1}{2p}}((\partial D)_T)$ for some $p\in (1,\infty)$.
+ When $p>3$, we assume that, in the sense of trace,
+ $$\nu \cdot \nabla w_0=\psi(\cdot,0) \mbox{~on~} \partial D.$$
+Then  \eqref{Apx:1} admits a unique strong solution $w\in W_p^{2,1}(D_T)$, which satisfies
+	\begin{equation}\label{B.2}
+		||w||_{W^{2,1}_p(D_T)} \le  C \left( ||f||_{L^p(D_T)} + ||w_0||_{W^{2-\frac{2}{p}}_p(D)} + ||\psi||_{W^{1-\frac{1}{p},\frac{1}{2}-\frac{1}{2p}}_p((\partial D)_T)}\right)
+	\end{equation}
+provided $p\neq 2,3$.
+\end{theorem}
+
+
+\begin{theorem}\emph{(\cite[Corollary\,5.1.22]{Lunardi1995})}\label{thm:apx2}
+	Suppose that $c,f\in C^{\alpha,\frac{\alpha}{2}}(\overline{D_T})$, $w_0\in C^{2+\alpha}(\overline{D})$, and
+	$\psi\in C^{1+\alpha,\frac{1}{2}+\frac{\alpha}{2}}(\overline{(\partial D)_T})$. Assume
+$$\nu\cdot \nabla w_0=\psi(x,0)\;\;\mbox{on}\;\; \partial D.$$
+ Then \eqref{Apx:1} has a classical solution $w\in C ^{2+\alpha,1+\frac{\alpha}{2}}(\overline{D_T})$, which satisfies
+	\begin{equation}\label{B.3}
+		||w||_{C^{2+\alpha,1+\frac{\alpha}{2}}(\overline{D_T})} \le C
+		\left(
+		||w_0||_{C^{2+\alpha}(\overline{D})}+\|f\|_{C^{\alpha,\frac{\alpha}{2}}(\overline{D_T})}
+		+ ||\psi||_{C^{1+\alpha, \frac{1}{2}+ \frac{\alpha}{2}}(\overline{(\partial D)_T})}
+		\right).
+	\end{equation}
+\end{theorem}
+
+
+
+
+\begin{theorem}\emph{(\cite[Theorem\,2.6 and Corrollary\,2.10]{SW2009})}
+
+	\begin{equation}\label{eq:C2}
+		||w||_{W^{2}_p(D)}\le C \left(
+		||f||_{L^p(D)} + ||\psi||_{W^{1-\frac{1}{p}}_p(\partial D)}
+		\right).
+	\end{equation}
+\end{theorem}
+\begin{theorem}\emph{(\cite[Theorems\,3.1 and 3.2]{LN1968} and \cite[Proposition\,3.3]{Amann1976})}
+\label{C:2}
+
+
+\begin{equation}
+	||w||_{C^{2+\alpha}(\overline{D})} \le C \left( ||f||_{C^{\alpha}(\overline{D})} +
+	||\psi||_{C^{1+\alpha}(\partial D)}
+	\right),
+\end{equation}
+\begin{equation}
+	||w||_{W^1_p(D)} \le C_p
+	\left(
+	||f||_{L^p(D)} + ||\psi||_{L^p(\partial D)}
+	\right)\quad \forall\, p\in (1,\infty).
+\end{equation}
+\end{theorem}
+
+
+
+
+%-----------------------Reference------------------%
+\begin{thebibliography}{100}\setlength{\itemsep}{-0.5mm}
+
+%\begin{thebibliography}{100}
+
+\bibitem{Adam}
+\newblock R. A. Adams,
+\newblock Sobolev Spaces,
+\newblock Academic Press, New York, 1975.
+
+\bibitem{Amann1976}
+\newblock H. Amann,
+\newblock Nonlinear Elliptic Equations with Nonlinear Boundary Conditions,
+\newblock in: North-Holland Mathematics Studies, Elsevier, 1976: pp.\,43--63.
+\bibitem{Amann2019}
+\newblock H. Amann,
+\newblock Linear and Quasilinear Parabolic Problems, Vol. II, Function Spaces,
+\newblock Springer, 2019.
+
+
+\bibitem{BCF80}
+\newblock H. Br\'ezis, L. A. Caffarelli and A. Friedman, Reinforcement problems for elliptic equations and variational inequalities,
+\newblock Ann. Mat. Pura Appl. 123 (1980) 219--246.
+
+
+\bibitem{BR14}
+\newblock R. B\"urger,
+\newblock A survey of migration-selection models in population genetics,
+\newblock Discrete Contin. Dyn. Syst. Ser. B 19 (2014) 883--959.
+
+
+
+\bibitem{CC03}
+R. S. Cantrell and C. Cosner, Spatial Ecology via Reaction-Diffusion Equations, Series in
+Mathematical and Computational Biology, John Wiley and Sons, Chichester, UK, 2003.
+
+
+
+\bibitem{Chen2001}
+\newblock C.-K. Chen,
+\newblock A barrier boundary value problem for parabolic and elliptic equation,
+\newblock Communications in Partial Differential Equations 26 (2001) 1117--1132.
+
+\bibitem{Chen2006}
+\newblock C.-K. Chen,
+\newblock A fixed interface boundary value problem for differential equations: a problem arising from population genetics,
+\newblock Dynamics of PDE 3 (2006) 199--208.
+
+
+\bibitem{PW1984}
+\newblock M. H. Protter and H. F. Weiberger,
+\newblock Maximum Principle in Differential Equations,
+\newblock Springer-Verlag, Berlin, Second edition, 1984.
+
+
+\bibitem{LSU1968}
+\newblock O. A. Ladyzhenskaya, V. A. Solonnikov and N. N. Ural'tseva,
+\newblock Linear and quasilinear equations of parabolic type,
+\newblock Transl. Math. Monogr. 23 Amer. Math. Soc., Providence, RI, 1968.
+
+\bibitem{LN1968}
+\newblock O. A. Ladyzhenskaya and N. N. Ural'tseva,
+\newblock Linear and quasilinear elliptic equations,
+\newblock Academic Press, New York, 1968.
+
+
+
+
+
+
+
+
+
+
+\end{thebibliography}
+
+
+
+
+\end{document}
